@@ -10,6 +10,10 @@ Patch0:		%{name}-make.patch
 URL:		http://crazylovetrain.hypermart.net/projects.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
+%ifarch ppc
+%define		optflags	-O0
+%endif
+
 %description
 UConio is a Unix port of the Borland Console Input/Output Library
 (CONIO) for DOS, and includes some new features of its own.
@@ -34,23 +38,20 @@ Pliki nag³ówkowe i dokumentacja do %{name}.
 %setup -q -n %{name}-%{version}-PR
 %patch -p1
 
-%build
-%ifarch ppc
-%define optflags -O0
-%endif
+bzip2 -d man/*.bz2
 
+%build
 %{__make} "CFLAGS=%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_libdir},%{_mandir}/man3,%{_includedir}}
 
-bzip2 -d man/*.bz2
+install	bin/libuconio.so.* $RPM_BUILD_ROOT%{_libdir}
+install include/*.h $RPM_BUILD_ROOT%{_includedir}
+install	man/*.3 $RPM_BUILD_ROOT%{_mandir}/man3
 
-install	 bin/libuconio.so.*	$RPM_BUILD_ROOT%{_libdir}
 (cd $RPM_BUILD_ROOT%{_libdir}; ln -s libuconio.so.* libuconio.so)
-install include/*.h		$RPM_BUILD_ROOT%{_includedir}
-install	man/*.3			$RPM_BUILD_ROOT%{_mandir}/man3
 
 %clean
 rm -rf $RPM_BUILD_ROOT
