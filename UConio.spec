@@ -6,6 +6,7 @@ Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://crazylovetrain.hypermart.net/files/uconio/%{name}-%{version}-PR.tar.gz
+# Source0-md5:	08a6caac1daa6ab4cd27804ce99a79c5
 Patch0:		%{name}-make.patch
 Patch1:		%{name}-va_end.patch
 URL:		http://crazylovetrain.hypermart.net/projects.htm
