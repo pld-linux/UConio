@@ -7,6 +7,7 @@ License:	GPL
 Group:		Libraries
 Source0:	http://crazylovetrain.hypermart.net/files/uconio/%{name}-%{version}-PR.tar.gz
 Patch0:		%{name}-make.patch
+Patch1:		%{name}-va_end.patch
 URL:		http://crazylovetrain.hypermart.net/projects.htm
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -36,7 +37,8 @@ Pliki nag³ówkowe i dokumentacja do %{name}.
 
 %prep
 %setup -q -n %{name}-%{version}-PR
-%patch -p1
+%patch0 -p1
+%patch1 -p0
 
 bzip2 -d man/*.bz2
 
