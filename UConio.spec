@@ -2,7 +2,7 @@ Summary:	Borland CONIO library port for Unix
 Summary(pl):	Port biblioteki Borland CONIO dla Unixa
 Name:		UConio
 Version:	1.0.9
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries
 Source0:	http://crazylovetrain.hypermart.net/files/uconio/%{name}-%{version}-PR.tar.gz
