@@ -1,0 +1,11 @@
+--- src/uconio.c~	Sat Mar  8 13:30:50 2003
++++ src/uconio.c	Sat Mar  8 13:33:56 2003
+@@ -368,7 +368,7 @@
+ 		    }
+ 	    }
+ 	
+-	va_end(chrs);
++	va_end(args);
+     }
+ 
+ 
