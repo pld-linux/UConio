@@ -25,16 +25,16 @@ UConio jest Uniksowym portem biblioteki Borland Console Input/Output
 (CONIO) dla DOS-a, zawiera te¿ trochê dodanych, nowych funkcji.
 
 %package devel
-Summary:	Header files and development documentation for %{name}
-Summary(pl):	Pliki nag³ówkowe i dokumentacja do %{name}
+Summary:	Header files and development documentation for UConio
+Summary(pl):	Pliki nag³ówkowe i dokumentacja do UConio
 Group:		Development/Libraries
 Requires:	%{name} = %{version}
 
 %description devel
-Header files and development documentation for %{name}.
+Header files and development documentation for UConio.
 
-%description -l pl devel
-Pliki nag³ówkowe i dokumentacja do %{name}.
+%description devel -l pl
+Pliki nag³ówkowe i dokumentacja do UConio.
 
 %prep
 %setup -q -n %{name}-%{version}-PR
