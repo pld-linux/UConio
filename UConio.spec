@@ -1,4 +1,4 @@
-Summary:	Bornalnd CONIO library port for Unix
+Summary:	Borland CONIO library port for Unix
 Summary(pl):	Port biblioteki Borland CONIO dla Unixa
 Name:		UConio
 Version:	1.0.9
@@ -9,6 +9,9 @@ Group(de):	Libraries
 Group(es):	Bibliotecas
 Group(fr):	Librairies
 Group(pl):	Biblioteki
+Group(pt_BR):	Bibliotecas
+Group(ru):	Библиотеки
+Group(uk):	Б╕бл╕отеки
 Source0:	http://crazylovetrain.hypermart.net/files/uconio/%{name}-%{version}-PR.tar.gz
 Patch0:		%{name}-make.patch
 URL:		http://crazylovetrain.hypermart.net/projects.htm
@@ -19,16 +22,20 @@ UConio is a Unix port of the Borland Console Input/Output Library
 (CONIO) for DOS, and includes some new features of its own.
 
 %description -l pl
-UConio jest Unixowym portem biblioteki Borland Console Input/Output
-(CONIO) dla DOSa oraz dodatkowo dodano nowe funkcje.
+UConio jest Uniksowym portem biblioteki Borland Console Input/Output
+(CONIO) dla DOS-a, zawiera te© trochЙ dodanych, nowych funkcji.
 
 %package devel
 Summary:	Header files and development documentation for %{name}
 Summary(pl):	Pliki nagЁСwkowe i dokumentacja do %{name}
 Group:		Development/Libraries
 Group(de):	Entwicklung/Libraries
+Group(es):	Desarrollo/Bibliotecas
 Group(fr):	Development/Librairies
 Group(pl):	Programowanie/Biblioteki
+Group(pt_BR):	Desenvolvimento/Bibliotecas
+Group(ru):	Разработка/Библиотеки
+Group(uk):	Розробка/Б╕бл╕отеки
 Requires:	%{name} = %{version}
 
 %description devel
@@ -57,11 +64,11 @@ install	man/*.3			$RPM_BUILD_ROOT%{_mandir}/man3
 
 gzip -9nf tutorial/txt/*.txt doc/{AUTHOR,BUGS,ChangeLog,HELPERS,README}
 
-%post   -p /sbin/ldconfig
-%postun -p /sbin/ldconfig
-
 %clean
 rm -rf $RPM_BUILD_ROOT
+
+%post   -p /sbin/ldconfig
+%postun -p /sbin/ldconfig
 
 %files
 %defattr(644,root,root,755)
