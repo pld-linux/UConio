@@ -21,7 +21,7 @@ UConio is a Unix port of the Borland Console Input/Output Library
 (CONIO) for DOS, and includes some new features of its own.
 
 %description -l pl
-UConio jest Uniksowym portem biblioteki Borland Console Input/Output
+UConio jest uniksowym portem biblioteki Borland Console Input/Output
 (CONIO) dla DOS-a, zawiera te¿ trochê dodanych, nowych funkcji.
 
 %package devel
