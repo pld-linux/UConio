@@ -59,7 +59,7 @@ install	man/*.3 $RPM_BUILD_ROOT%{_mandir}/man3
 %clean
 rm -rf $RPM_BUILD_ROOT
 
-%post   -p /sbin/ldconfig
+%post	-p /sbin/ldconfig
 %postun -p /sbin/ldconfig
 
 %files
