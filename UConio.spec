@@ -1,5 +1,5 @@
 Summary:	Borland CONIO library port for Unix
-Summary(pl):	Port biblioteki Borland CONIO dla Unixa
+Summary(pl):	Port biblioteki Borland CONIO dla Uniksa
 Name:		UConio
 Version:	1.0.9
 Release:	3
