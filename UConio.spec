@@ -35,7 +35,11 @@ Pliki nag³ówkowe i dokumentacja do %{name}.
 %patch -p1
 
 %build
+%ifarch %{ix86}
+%{__make} "CFLAGS=%{rpmcflags}"
+%else
 %{__make}
+%endif
 
 %install
 rm -rf $RPM_BUILD_ROOT
