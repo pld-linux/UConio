@@ -2,7 +2,7 @@ Summary:	Borland CONIO library port for Unix
 Summary(pl):	Port biblioteki Borland CONIO dla Unixa
 Name:		UConio
 Version:	1.0.9
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries
 Source0:	http://crazylovetrain.hypermart.net/files/uconio/%{name}-%{version}-PR.tar.gz
@@ -35,7 +35,7 @@ Pliki nag³ówkowe i dokumentacja do %{name}.
 %patch -p1
 
 %build
-%{__make} "CFLAGS=%{rpmcflags}"
+%{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -48,8 +48,6 @@ install	 bin/libuconio.so.*	$RPM_BUILD_ROOT%{_libdir}
 install include/*.h		$RPM_BUILD_ROOT%{_includedir}
 install	man/*.3			$RPM_BUILD_ROOT%{_mandir}/man3
 
-gzip -9nf tutorial/txt/*.txt doc/{AUTHOR,BUGS,ChangeLog,HELPERS,README}
-
 %clean
 rm -rf $RPM_BUILD_ROOT
 
@@ -58,12 +56,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc doc/*.gz
+%doc doc/{AUTHOR,BUGS,ChangeLog,HELPERS,README}
 %attr(755,root,root) %{_libdir}/lib*.so.*
 
 %files devel
 %defattr(644,root,root,755)
-%doc tutorial/*/*.gz
+%doc tutorial/txt/*.txt
 %attr(755,root,root) %{_libdir}/lib*.so
 %{_mandir}/man3/*
 %{_includedir}/*.h
