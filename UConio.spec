@@ -28,7 +28,7 @@ UConio jest uniksowym portem biblioteki Borland Console Input/Output
 Summary:	Header files and development documentation for UConio
 Summary(pl):	Pliki nag³ówkowe i dokumentacja do UConio
 Group:		Development/Libraries
-Requires:	%{name} = %{version}
+Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for UConio.
