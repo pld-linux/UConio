@@ -1,5 +1,5 @@
 Summary:	Borland CONIO library port for Unix
-Summary(pl):	Port biblioteki Borland CONIO dla Uniksa
+Summary(pl.UTF-8):   Port biblioteki Borland CONIO dla Uniksa
 Name:		UConio
 Version:	1.0.9
 Release:	3
@@ -20,21 +20,21 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 UConio is a Unix port of the Borland Console Input/Output Library
 (CONIO) for DOS, and includes some new features of its own.
 
-%description -l pl
+%description -l pl.UTF-8
 UConio jest uniksowym portem biblioteki Borland Console Input/Output
-(CONIO) dla DOS-a, zawiera teø trochÍ dodanych, nowych funkcji.
+(CONIO) dla DOS-a, zawiera te≈º trochƒô dodanych, nowych funkcji.
 
 %package devel
 Summary:	Header files and development documentation for UConio
-Summary(pl):	Pliki nag≥Ûwkowe i dokumentacja do UConio
+Summary(pl.UTF-8):   Pliki nag≈Ç√≥wkowe i dokumentacja do UConio
 Group:		Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 
 %description devel
 Header files and development documentation for UConio.
 
-%description devel -l pl
-Pliki nag≥Ûwkowe i dokumentacja do UConio.
+%description devel -l pl.UTF-8
+Pliki nag≈Ç√≥wkowe i dokumentacja do UConio.
 
 %prep
 %setup -q -n %{name}-%{version}-PR
